@@ -243,6 +243,43 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
 </div>
 <!-- Fin del modal 3 -->
 
+<!-- Inicio modal de contacto -->
+<div class="modal fade" id="formularioContacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contáctanos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="txtNombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="txtApellido">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="txtEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Escribe el mensaje</label>
+            <textarea class="form-control" id="txtMensaje" rows="3" required></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-dark">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin modal de contacto -->
+
 <!-- Inicio card para contador de productos -->
 <div class="row mt-4 justify-content-center">
   <div class="col-md-5">
@@ -330,6 +367,7 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
   <div class="container">
     <p class="mb-0">GRUPO CERO</p>
     <p>TODOS LOS DERECHOS RESERVADOS @ 2024</p>
+    <button type="button" class="btn btn-outline-light btn-contacto" data-bs-toggle="modal" data-bs-target="#formularioContacto">Contacto</button>
   </div>
 </footer>
 <!-- Fin del footer -->
