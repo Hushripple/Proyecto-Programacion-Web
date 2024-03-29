@@ -1,11 +1,11 @@
 footer {
-    background-color: black; /* Color de fondo del footer */
+    background-color: black;
     color: white;
-    padding: 20px 0; /* Espaciado interno del footer */
-    text-align: center; /* Centrar el texto */
-    position: fixed; /* Fijar el footer en la parte inferior de la ventana */
-    width: 100%; /* Ancho completo */
-    bottom: 0; /* Pegar el footer a la parte inferior */
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
   }
 
 body{
