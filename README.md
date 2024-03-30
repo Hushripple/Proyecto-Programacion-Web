@@ -8,6 +8,12 @@
 
   El contexto del caso se encuentra dentro del index.html, de manera comentada.
 
+## Preview
+
+  Puedes ver una preview de cómo va quedando la página acá:
+
+  https://grupocerohushripple.neocities.org/
+
 ## Características
 
 - **Exhibición de Álbumes**: Los integrantes de la cooperativa podrán cargar álbumes musicales con información detallada, como título, descripción, técnica utilizada, precio, etc.
@@ -25,12 +31,6 @@
 - JavaScript (Próximamente)
 - PHP (Próximamente)
 - SQL Developer (Próximamente)
-
-## Preview
-
-Puedes ver una preview de cómo va quedando la página acá:
-
-https://grupocerohushripple.neocities.org/
 
 ## Progreso
 
