@@ -34,6 +34,4 @@ https://grupocerohushripple.neocities.org/
 
 ## Progreso
 
-- **30/03/2024:** Se incluyó un apartado de Artistas y botones de "Ver más", los cuales se esperan hacer funcionar en los próximos días. Mucho de lo que queda de página depende de la lógica de programación que aún no estamos listos para implementar, pero es posible hacer que al menos los botones de "Ver más" redirijan a otros HTMLs. 
-
-También se incluyó un Easter Egg no muy secreto ni sutil como método para desconcentrarme un poco.
+- **30/03/2024:** Se incluyó un apartado de Artistas y botones de "Ver más", los cuales se esperan hacer funcionar en los próximos días. Mucho de lo que queda de página depende de la lógica de programación que aún no estamos listos para implementar, pero es posible hacer que al menos los botones de "Ver más" redirijan a otros HTMLs. También se incluyó un Easter Egg no muy secreto ni sutil como método para desconcentrarme un poco.
