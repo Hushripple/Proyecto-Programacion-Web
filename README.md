@@ -8,7 +8,7 @@
 
   El contexto del caso se encuentra dentro del index.html, de manera comentada.
 
-## Preview
+## Preview 
 
   Puedes ver una preview de cómo va quedando la página acá:
 
