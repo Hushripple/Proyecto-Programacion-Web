@@ -29,9 +29,9 @@
 - HTML5
 - CSS3 (Bootstrap 5)
 - JavaScript (Próximamente)
-- PHP (Próximamente)
-- SQL Developer (Próximamente)
 
 ## Progreso
 
 - **30/03/2024:** Se incluyó un apartado de Artistas y botones de "Ver más", los cuales se esperan hacer funcionar en los próximos días. Mucho de lo que queda de página depende de la lógica de programación que aún no estamos listos para implementar, pero es posible hacer que al menos los botones de "Ver más" redirijan a otros HTMLs. También se incluyó un Easter Egg no muy secreto ni sutil como método para desconcentrarme un poco. Finalmente se decidió utilizar una fuente atractiva para algunos títulos, negritas y contenido importante.
+
+- **03/04/2024:** Se está trabajando en un panel tanto de miembros de la cooperativa como en uno de administradores, cada uno con funcionalidades que aparecen en el contexto. También hicimos la simulación de que algunos botones funcionan, aunque hay muchos otros que aún debemos integrar. Estamos conscientes de un error en nuestro código que hace que haya un espacio vertical a la derecha de todo, el cual solucionaremos próximamente. Finalmente se eliminaron algunas "tecnologías utilizadas" que realmente no utilizaremos ya que este proyecto es básico y como mucho tendrá pequeñas implementaciones de JavaScript.
