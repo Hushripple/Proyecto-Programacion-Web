@@ -1,40 +1,3 @@
-
-<!-- Cooperativa Grupo Cero -->
-
-<!--
-Contexto: Un grupo de artistas plásticos dedicados a la pintura, escultura, orfebrería, tejido y otras expresiones artísticas, 
-deciden formar una cooperativa llamada “Grupo Cero”.
-El trabajo cooperativo que hacen les permite tener un taller y una sala de exhibición para sus trabajos.
-Además de la sala de exhibición de las obras, comparten un pequeño café que les sirve de lugar de reunión para atender 
-a los clientes que solicitan trabajos especiales o que desean comprar alguna delas obras. El tiempo ha pasado y el trabajo 
-incansable de los socios ha empezado a dar sus frutos y ya gozan de una muy buena reputación lo que les permite tener un volumen 
-constante de ventas de las obras. Producto de lo anterior, ha surgido la necesidad de crear una página web para exhibir los trabajos 
-de los artistas y posteriormente quien sabe, implementar una tienda on-line. La encargada de la parte comercial organiza una entretenida 
-reunión en el café con todos los artistas para definir la funcionalidad que ellos necesitan para la página web. Recuerda que tus usuarios son 
-poco diestros con el uso de nuevas tecnologías, sin embargo, hay varios que utilizan tiendas on-line para realizar sus compras de materiales e insumos, 
-por lo cual saben que características les gustaría que su página web presentará y esto se resume de la siguiente forma:
-
-1. La página web debe tener un menú en la parte superior con el logo de la cooperativa. (Listo) 
-2. En la página principal deben aparecer los productos más destacados en un carrusel de imágenes. (Listo)
-3. Al hacer clic en una de las imágenes, se debe poder entrar a ver el detalle del objeto (historia, descripción, nombre, precio, técnica usada, etc) y la galería de fotos 
-si es que tiene. Los artículos el menos poseen una foto. (Listo)
-4. Además de la galería, la página principal deberá tener una opción de búsqueda por nombre del artista o por tipo de arte o por concepto. (Listo)
-5. También deberá mostrar la cantidad de productos que han sido ingresados por un usuario. (Listo)
-6. Es necesario tener un formulario de contacto general. (Listo)
-7. Desde la página principal se puede acceder a los productos por categoría o por artista. (Listo)
-8. Los usuarios deberían poder registrarse, sólo es necesario el email, el nombre y el password. (Listo)  
-9. El usuario debería tener la opción de autenticarse en el sitio mediante email y password. (Listo)
-10. Se debe mostrar si el usuario se ha logueado o no. (Listo)
-11. El proceso para agregar nuevas obras es el siguiente:
-  a. Cada integrante de la cooperativa posee una cuenta creada por el administrador del sitio. (Listo)
-  b. Una vez que el integrante ingresa al sitio (email y password), puede publicar la obra que quiere vender llenando todos los datos en el formulario dispuesto para esto. (Listo)
-  c. La obra no se publica en la página hasta que pasa por el visto bueno del administrador, el cual puede rechazar la publicación por mala redacción o faltas de ortografía 
-  o porque las imágenes son de mala calidad.
-  d. Si el administrador rechaza la publicación, debe informar por qué lo hizo y el integrante de la cooperativa visualizará esta información en el momento en que ingrese a la plataforma.
-12. No se considera aún el proceso de venta directa al público desde la plataforma, sino que sólo la publicación de las obras para ser exhibidas on-line. (Listo)
-13. Es fundamental que la página sea responsiva y que se adapte tanto a pantallas grandes como a pantallas de dispositivos móviles. (Listo)
---> 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -57,15 +20,16 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
     </div>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registroModal">Registro</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="miembroLogin.html">Miembro</a>
+        <a class="nav-link text-center" style="width:200px;">Bienvenid@, usuari@</a>
       </li>
     </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <button class="btn btn-dark" type="button" style="width:120px;">Cerrar sesión</button>
+        </a>
+      </li>
+    </ul>    
   </div>
   <form class="d-flex">
     <input class="form-control me-2" type="text" placeholder="">
@@ -73,62 +37,6 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
   </form>
 </nav>
 <!-- Fin menú con logo-->
-
-<!-- Inicio modals para registro e inicio de sesión -->
-<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="registroModalLabel">Registro</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <!-- Formulario de registro -->
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="emailRegistro" class="form-label">Email</label>
-            <input type="email" class="form-control" id="txtEmail" required>
-          </div>
-          <div class="mb-3">
-            <label for="nombreRegistro" class="form-label">Usuario</label>
-            <input type="text" class="form-control" id="txtUsuario" required>
-          </div>
-          <div class="mb-3">
-            <label for="passwordRegistro" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="txtPassword" required>
-          </div>
-          <button type="submit" class="btn btn-dark">Registrarse</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <!-- Formulario de inicio de sesión -->
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="emailLogin" class="form-label">Email</label>
-            <input type="email" class="form-control" id="txtEmail" required>
-          </div>
-          <div class="mb-3">
-            <label for="passwordLogin" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="txtPassword" required>
-          </div>
-          <!-- href a indexlogin.html -->
-          <a button type="submit" class="btn btn-dark" href="loginIndex.html">Iniciar sesión</button></a>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Fin modals para registro e inicio de sesión -->
 
 <!-- Inicio carrusel -->
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -230,7 +138,7 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
         <p><strong>Artista:</strong> Wormrot</p>
         <p><strong>Género:</strong> Grindcore</p>
         <p><strong>Fecha de lanzamiento:</strong> 3 de Mayo de 2011</p>
-        <p>Dirge es el segundo álbum de la banda de grindcore de Singapur, Wormrot, publicado en 2011, y es una excelente continuación vitriólica de su anterior álbum Abuse.
+        <p>Dirge es el segundo álbum de la banda de grindcore de Singapur, Wormrot, publicado en 2011, y es una excelente continuación vitriólica de su anterior álbumAbuse.
 
 
           El sonido del oldschool grindcore es fuerte en la música de Wormrot, pero tienen una gran dosis de individualidad que realmente les hace destacar entre la multitud. Con una verdadera influencia hardcore en su música, la voz del vocalista Arif es excelente, chillando y ladrando a partes iguales con enorme energía, e incluso con una interpretación intensa las letras enfadadas y enojadas son fáciles de entender en comparación con la mayoría de artistas grindcore. Es una interpretación poderosa, violenta y furiosa, con letras a la altura y agresivas: desde los ataques con carga política hasta los estallidos de odio puro, las letras son geniales. Los riffs del álbum son brillantes, y con un tono de guitarra enorme y machacón, el álbum rara vez sale de la velocidad máxima, con riffs cortantes y feroces que componen la mayor parte de la interpretación, pero cuando entran los riffs más lentos y groovies, los hace aún mejores. La interpretación es magnífica, con muchos riffs variados que garantizan que cada una de las 25 canciones no se convierta en la siguiente. Pero quizá la estrella del espectáculo sea la batería. Atronando al más puro estilo grind, pero con excelentes y variados rellenos e ideas interesantes en todo momento, es una actuación suprema, que toma tanto del hardcore como del grindcore, con toneladas de redobles de batería que realmente añaden energía a la pista. Sin depender únicamente de los blast beats, es aún mejor escuchar un enfoque tan variado e interesante.</p>
@@ -282,6 +190,33 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
 </div>
 <!-- Fin modal de contacto -->
 
+<!-- Inicio modal de confirmación de cierre de sesión -->
+<!-- POR HACER -->
+<div class="modal" id="#estaSeguro">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fin modal de confirmación de cierre de sesión -->
+
 <!-- Inicio card para contador de productos -->
 <div class="row mt-4 justify-content-center">
   <div class="col-md-5">
@@ -332,7 +267,7 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
   </div>
 </section>
 <!-- Segunda sección de lanzamientos -->
-<section class="mb-5" id="lanzamientos2">
+<section class="mb-5" id="lanzamientos">
   <div class="row justify-content-center">
     <div class="col-md-2 col-sm-12">
       <div class="card h-100 border-0 mx-auto align-items-center mb-5">
@@ -399,7 +334,7 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
   </div>
 </section>
 <!-- Segunda sección de artistas -->
-<section class="mb-5" id="artistas2">
+<section class="mb-5" id="artistas">
   <div class="row justify-content-center">
     <div class="col-md-2 col-sm-12">
       <div class="card h-100 border-0 mx-auto align-items-center mb-5">
@@ -429,9 +364,19 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
 </section>
 <!-- Fin cards para artistas -->
 
+<style> 
+  .egg-link {
+    color: white;
+  }
+</style>
+
+<div class="container mt-5">
+  <a href="/egg.html" class="egg-link">EGG</a>
+</div>
+
 <!-- Footer -->
 <footer class="footer">
-  <div class="container-fluid">
+  <div class="container">
     <p class="mb-0" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">GRUPO CERO</p>
     <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">TODOS LOS DERECHOS RESERVADOS @ 2024</p>
     <button type="button" class="btn btn-outline-light btn-contacto" data-bs-toggle="modal" data-bs-target="#formularioContacto">Contacto</button>
