@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas-Grupo Cero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/noise2.png">
+</head>
+<body>
+
+<!-- Inicio menú con logo -->
+<nav class="navbar navbar-expand-sm bg-primary navbar-light justify-content-center">
+  <div class="container-fluid">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/LOGO.png" alt="Avatar Logo" style="width:200px;" class="rounded-pill"> 
+      </a>
+    </div>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registroModal">Registro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="miembroLogin.html">Miembro</a>
+      </li>
+    </ul>
+  </div>
+  <form class="d-flex">
+    <input class="form-control me-2" type="text" placeholder="">
+    <button class="btn btn-dark" type="button">Buscar</button>
+  </form>
+</nav>
+<!-- Fin menú con logo-->
+
+<!-- Inicio modals para registro e inicio de sesión -->
+<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-black" id="registroModalLabel">Registro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Formulario de registro -->
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="emailRegistro" class="form-label text-black">Email</label>
+            <input type="email" class="form-control" id="txtEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="nombreRegistro" class="form-label text-black">Usuario</label>
+            <input type="text" class="form-control" id="txtUsuario" required>
+          </div>
+          <div class="mb-3">
+            <label for="passwordRegistro" class="form-label text-black">Contraseña</label>
+            <input type="password" class="form-control" id="txtPassword" required>
+          </div>
+          <button type="submit" class="btn btn-dark">Registrarse</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-black" id="loginModalLabel">Iniciar sesión</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Formulario de inicio de sesión -->
+      <div class="modal-body">
+        <form action="loginartistas2.html">
+          <div class="mb-3">
+            <label for="emailLogin" class="form-label text-black">Email</label>
+            <input type="email" class="form-control" id="txtEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="passwordLogin" class="form-label text-black">Contraseña</label>
+            <input type="password" class="form-control" id="txtPassword" required>
+          </div>
+          <!-- href a indexlogin.html -->
+          <button type="submit" class="btn btn-dark">Iniciar sesión</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin modals para registro e inicio de sesión -->
+
+<!-- container de las cartas -->
+<div class="container"> 
+<!-- Inicio card para contador de productos -->
+<div class="row mt-4 justify-content-center">
+  <div class="col-md-5">
+    <div class="card text-center border-0">
+      <div class="card-body">
+        <h5 class="card-title">Productos ingresados por el usuario</h5>
+        <p class="card-text">Cantidad: <span class="badge bg-dark" id="contador-productos">0</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin card para contador de productos -->
+
+<!-- Inicio cards para artistas -->
+<section class="mb-5" id="artistas">
+  <div class="row justify-content-center">
+    <h2 class="text-center my-4" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><strong>ARTISTAS</strong></h2>
+    <div class=" text-center pt-0 pb-5">
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-12 align-items-center mb-5">
+        <img class="card-img-top" src="img/kendrick-lamar.jpg" alt="kendrick-lamar" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal01">
+        <div class="card-body text-center">
+          <h4>kendrick Lamar</h4>
+        </div> 
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+        <img class="card-img-top" src="img/metroboomin.jpg" alt="metroboomin" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal02">
+        <div class="card-body text-center">
+          <h4>Metro Boomin</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+        <img class="card-img-top" src="img/Napalm_Death.jpg" alt="Napalm_Death" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal03">
+        <div class="card-body text-center">
+          <h4>Napalm Death</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+        <img class="card-img-top" src="img/Nasum.jpeg" alt="Nasum" style="max-width: 130px; max-height: 330px;" data-bs-toggle="modal" data-bs-target="#myModal04">
+        <div class="card-body text-center">
+          <h4>Nasum</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5 ">
+          <img class="card-img-top" src="img/Pablochille.jpg" alt="Pablo-chill-e" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal05">
+          <div class="card-body text-center">
+            <h4>Pablo Chill-e</h4>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+</section>
+<!-- Segunda sección de artistas -->
+<section class="mb-5" id="artistas">
+  <div class="row justify-content-center">
+    <div class=" text-center pt-0 pb-5">
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-12 align-items-center mb-5">
+        <img class="card-img-top" src="img/PigDestroyer.jpg" alt="Pig-Destroyer" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal11">
+        <div class="card-body text-center">
+          <h4>Pig Destroyer</h4>
+        </div> 
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+        <img class="card-img-top" src="img/RottenSound.jpg" alt="Rotten-Sound" style="max-width: 130px; max-height: 130px;"data-bs-toggle="modal" data-bs-target="#myModal12">
+        <div class="card-body text-center">
+          <h4>Rotten Sound</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+        <img class="card-img-top" src="img/SeteStarSept.jpg" alt="Sete-Star-Sept" style="max-width: 130px; max-height: 130px;"data-bs-toggle="modal" data-bs-target="#myModal13">
+        <div class="card-body text-center">
+          <h4>Sete Star Sept</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+        <img class="card-img-top" src="img/tranquilizer-band.jpg" alt="tranquilizer-band" style="max-width: 130px; max-height: 130px;"data-bs-toggle="modal" data-bs-target="#myModal14">
+        <div class="card-body text-center">
+          <h4>tranquilizer</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5 ">
+          <img class="card-img-top" src="img/Warsore.gif" alt="Warsore" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal15">
+          <div class="card-body text-center">
+            <h4>Warsore</h4>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- Tercera sección de artistas -->
+<section class="mb-5" id="artistas">
+  <div class="row justify-content-center">
+    <div class=" text-center pt-0 pb-5">
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-12 align-items-center mb-5">
+        <img class="card-img-top" src="img/wormrot-band.jpg" alt="wormrot-band" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal21">
+        <div class="card-body text-center">
+          <h4>Wormot</h4>
+        </div> 
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+        <img class="card-img-top" src="img/Yacopsae.jpeg" alt="Yacøpsæ" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal22">
+        <div class="card-body text-center">
+          <h4>Yacøpsæ</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+        <img class="card-img-top" src="img/Yanblock.jpeg" alt="Yan-block" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal23">
+        <div class="card-body text-center">
+          <h4>Yan Block</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+        <img class="card-img-top" src="img/youngCister.jpeg" alt="young-Cister" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal24">
+        <div class="card-body text-center">
+          <h4>Young Cister</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5 ">
+          <img class="card-img-top" src="img/youngthug.jpg" alt="young-Thug" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal25">
+          <div class="card-body text-center">
+            <h4>Young Thug</h4>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- Cuarta sección de artistas -->
+<section class="mb-5" id="artistas">
+  <div class="row justify-content-center">
+    <div class=" text-center pt-0 pb-5">
+    </div>
+    <div class="col-md-2 col-sm-12">
+      <div class="card h-100 border-0 mx-12 align-items-center mb-5">
+        <img class="card-img-top" src="img/yovngchimi.jpg" alt="yovngchimi" style="max-width: 130px; max-height: 130px;" data-bs-toggle="modal" data-bs-target="#myModal31">
+        <div class="card-body text-center">
+          <h4>Yovngchimi</h4>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<!-- Fin cards para artistas -->
+
+<!-- Modal 1 seccion 1 -->
+<div>
+<div class="modal" id="myModal01" data-bs-theme="dark">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title" >kendrick Lamar</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Kendrick Lamar Duckworth (nacido en 1987) es un rapero, compositor y productor discográfico estadounidense. Es conocido por su lirismo complejo y matizado, que a menudo explora temas como la raza, la religión, la pobreza y la violencia. Ha sido elogiado por su capacidad para contar historias y crear imágenes vívidas en su música. En resumen, Kendrick Lamar es uno de los raperos más importantes e influyentes de su generación. Su música es compleja, matizada y poderosa, y ha abordado temas importantes que a menudo se ignoran en el hip hop. Es un artista verdaderamente único y su legado seguirá resonando durante muchos años.      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal 2 seccion 1  -->
+<div class="modal" id="myModal02"  data-bs-theme="dark">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Metro Boomin</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Leland Tyler Wayne (nacido en 1993), mejor conocido por su nombre artístico Metro Boomin, es un productor discográfico, DJ y compositor estadounidense. Es conocido por su trabajo en el género trap, comenzó su carrera produciendo mixtapes para artistas locales en St. Louis, Missouri. En 2013, se mudó a Atlanta, Georgia, donde comenzó a trabajar con artistas más conocidos como Future, Young Thug y Gucci Mane. Su trabajo con estos artistas le ayudó a ganar reconocimiento en la industria musical, y pronto se convirtió en uno de los productores más solicitados del trap.      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal 3 seccion 1 -->
+<div class="modal" id="myModal03"  data-bs-theme="dark">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Napalm Death</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        
+        Napalm Death es una banda británica de grindcore formada en 1981 en Birmingham, Inglaterra. Son considerados como los pioneros del género grindcore, fusionando elementos del hardcore punk, crust punk y death metal, con un sonido brutal y caótico que incluye guitarras distorsionadas y afinadas bajas, tempos extremadamente rápidos, blast beats, voces guturales y canciones extremadamente cortas.      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal 4 seccion 1 -->
+<div class="modal" id="myModal04"  data-bs-theme="dark">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Nasum</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Nasum fue una influyente banda sueca de grindcore que estuvo activa desde 1992 hasta 2004, cuando lamentablemente su vocalista, Mieszko Talarczyk, falleció trágicamente en el tsunami de 2004 en Tailandia. Durante su tiempo en la escena, Nasum dejó una marca indeleble con su estilo agresivo y sus letras políticamente cargadas. Su música, caracterizada por sus ritmos rápidos, voces guturales y riffs abrasivos, capturó la esencia del grindcore en su forma más pura y directa.
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal 5 seccion 1 -->
+<div class="modal" id="myModal05"  data-bs-theme="dark">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Pablo Chill-e</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Pablo Acevedo Leiva, más conocido por su nombre artístico Pablito Chill-E, es un cantante y compositor chileno de trap. Nació en Puente Alto, Santiago, en el año 2000. Se ha convertido en uno de los artistas urbanos más populares de Chile y Latinoamérica, con millones de seguidores en redes sociales y plataformas de streaming.
+
+        Pablito Chill-E comenzó su carrera musical en 2017, publicando sus primeras canciones en YouTube. Su estilo se caracteriza por letras crudas y directas, que retratan la realidad social de las poblaciones marginales de Chile, con referencias a la pobreza, la violencia y el narcotráfico. Su música también se destaca por la mezcla de trap con otros estilos como el reggaeton, el dancehall y el drill. 
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Modal 1 seccion 2 -->
+  <div class="modal" id="myModal11"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Pig Destroyer</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Pig Destroyer es una banda estadounidense de grindcore formada en 1991 en Washington D.C. Son conocidos por su sonido brutal y experimental, que incorpora elementos de noise, death metal y jazz. La música de Pig Destroyer se caracteriza por riffs disonantes y caóticos, blast beats implacables, voces guturales y samples de películas de terror y música electrónica. Sus letras son a menudo oscuras y nihilistas, y exploran temas como la violencia, la muerte y la locura.       </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2 seccion 2  -->
+  <div class="modal" id="myModal12"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rotten Sound</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Rotten Sound es una banda grindcore belga formada en 1993 en Waregem. Son conocidos por su sonido extremo y político, con letras que abordan temas como la anarquía, el anticapitalismo y la crítica social.        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- Modal 3 seccion 2 -->
+  <div class="modal" id="myModal13"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Sete Star Sept</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Sete Star Sept es una banda de grindcore y noise japonesa que se formó en Tokio en el año 2004. Su nombre proviene del portugués y significa "siete siete siete", que en la numerología japonesa se interpreta como un número de mala suerte. La música de Sete Star Sept se caracteriza por su brutalidad extrema, con influencias del grindcore, el powerviolence y el noise. Utilizan una combinación de guitarras distorsionadas, baterías caóticas y voces guturales para crear un sonido caótico y desgarrador. Además, son conocidos por sus presentaciones en vivo intensas y caóticas, donde la energía y la agresión son elementos clave.        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- Modal 4 seccion 2 -->
+  <div class="modal" id="myModal14"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tranquilizer</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Tranquilizer es una banda de punk rock originaria de Barcelona, España. Con un estilo enérgico y directo, la banda se destaca por su fusión de elementos del punk clásico con influencias del rock alternativo y el post-punk. Las letras de sus canciones a menudo abordan temas sociales y personales, con un enfoque crítico y reflexivo. Tranquilizer ha construido una sólida reputación en la escena local de Barcelona y ha ganado seguidores tanto en España como internacionalmente. Con un sonido distintivo y actuaciones enérgicas en vivo, la banda ha capturado la atención de los amantes del punk rock que buscan una música con fuerza y autenticidad.  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Modal 5 seccion 2 -->
+  <div class="modal" id="myModal15"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Warsore</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Warsore fue una banda de grindcore originaria de Melbourne, Australia, que estuvo activa durante los años 90 y principios de los 2000. Son conocidos por su estilo extremadamente rápido y brutal, típico del grindcore, un subgénero del metal extremo. La música de Warsore se caracterizaba por sus letras políticas y sociales, así como por su enfoque en temas como la injusticia, la guerra, la corrupción y la opresión. Aunque su discografía es relativamente limitada, su influencia en la escena grindcore australiana y mundial ha sido significativa. Warsore se destacó por su energía en vivo y su compromiso con la autenticidad del género. A pesar de que la banda se separó hace años, su legado continúa siendo valorado por los aficionados al grindcore y a la música extrema en general.</div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Modal 1 seccion 3 -->
+<div>
+  <div class="modal" id="myModal21"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Wormrot</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body  -->
+        <div class="modal-body">
+          Wormrot es una banda de grindcore originaria de Singapur, formada en 2007. Son conocidos por su estilo extremadamente rápido, brutal y caótico, típico del grindcore. La música de Wormrot se caracteriza por sus riffs abrasadores, baterías frenéticas y voces guturales, creando un sonido intenso y agresivo. A lo largo de los años, han lanzado varios álbumes aclamados por la crítica y han realizado giras por todo el mundo, ganando una sólida base de seguidores en la escena del metal extremo. Además de su talento musical, Wormrot también es admirado por su ética DIY (Hazlo Tú Mismo) y su compromiso con la autenticidad y la integridad en su música y su mensaje. Su influencia en la escena grindcore global es significativa, y continúan siendo una fuerza destacada en el género.        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2 seccion 3 -->
+  <div class="modal" id="myModal22"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Yacøpsæ</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Yacøpsæ es una banda alemana de grindcore que se formó en 1990 en Hamburgo. Son conocidos por su estilo musical caótico y extremadamente rápido, típico del grindcore, así como por su enfoque en letras políticas y sociales. La música de Yacøpsæ se caracteriza por sus riffs de guitarra abrasivos, baterías frenéticas y voces guturales, creando un sonido agresivo y lleno de energía. A lo largo de su carrera, la banda ha lanzado varios álbumes y EPs, consolidando su posición en la escena grindcore europea.         </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- Modal 3 seccion 3 -->
+  <div class="modal" id="myModal23"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Yan block</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Yan Block, nacido como Yandel Daniel Martínez en Puerto Rico, es un artista urbano que ha logrado reconocimiento en la escena musical latina. Conocido por su estilo único que combina trap, reggaeton y hip-hop, Block ha cautivado a una audiencia global con sus letras pegadizas y ritmos contagiosos.
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- Modal 4 seccion 3 -->
+  <div class="modal" id="myModal24"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Young Cister</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+         
+          Young Cister: Una voz del trap chileno
+          Young Cister, nacido como Esteban Alejandro Cisterna Álvarez en Santiago de Chile en 1996, es un rapero, cantante y compositor que se ha convertido en uno de los exponentes más relevantes del trap chileno. Su estilo, que mezcla trap, reggaeton y rap latino, ha cautivado a una audiencia global con sus letras honestas y ritmos contagiosos.        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- Modal 5 seccion 3 -->
+  <div class="modal" id="myModal25"  data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Young Thug</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Young Thug, nacido como Jeffery Lamar Williams en Atlanta, Georgia en 1991, es un rapero, cantante y compositor estadounidense que ha revolucionado la escena del hip-hop con su estilo único e innovador. Conocido por su voz distintiva, sus flows melódicos y su estética vanguardista, Thug se ha convertido en una figura influyente en la música moderna.
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>   
+  </div> 
+  
+<!-- Modal 1 seccion 4 -->
+<div>
+  <div class="modal" id="myModal31" data-bs-theme="dark">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">YOVNGCHIMI</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          YOVNGCHIMI, nacido como Ángel en Puerto Rico en 1995, es un artista urbano que ha irrumpido en la escena del trap latino con su estilo único y explosivo. Combinando trap, reggaeton y hip-hop con una energía vibrante, YOVNGCHIMI ha cautivado a una audiencia global con sus letras contagiosas y su flow inconfundible.          
+         </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+ 
+    
+
+
+    
+
+<style> 
+  .egg-link {
+    color: white;
+  }
+</style>
+
+<div class="container mt-5">
+  <a href="/egg.html" class="egg-link">EGG</a>
+</div>
+
+<ul class="pagination justify-content-center " data-bs-theme="dark">
+  <li class="page-item"><a class="page-link text-white" href="artistas.html">Anterior</a></li>
+  <li class="page-item"><a class="page-link text-white" href="artistas.html">1</a></li>
+  <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+  <li class="page-item disabled"><a class="page-link" href="#">Siguiente</a></li>
+</ul>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container-fluid">
+    <p class="mb-0" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">GRUPO CERO</p>
+    <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">TODOS LOS DERECHOS RESERVADOS @ 2024</p>
+    <button type="button" class="btn btn-outline-light btn-contacto" data-bs-toggle="modal" data-bs-target="#formularioContacto">Contacto</button>
+  </div>
+</footer>
+<!-- Fin del footer -->
+
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

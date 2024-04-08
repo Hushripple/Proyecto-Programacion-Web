@@ -29,8 +29,8 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
   a. Cada integrante de la cooperativa posee una cuenta creada por el administrador del sitio. (Listo)
   b. Una vez que el integrante ingresa al sitio (email y password), puede publicar la obra que quiere vender llenando todos los datos en el formulario dispuesto para esto. (Listo)
   c. La obra no se publica en la página hasta que pasa por el visto bueno del administrador, el cual puede rechazar la publicación por mala redacción o faltas de ortografía 
-  o porque las imágenes son de mala calidad.
-  d. Si el administrador rechaza la publicación, debe informar por qué lo hizo y el integrante de la cooperativa visualizará esta información en el momento en que ingrese a la plataforma.
+  o porque las imágenes son de mala calidad. (Listo)
+  d. Si el administrador rechaza la publicación, debe informar por qué lo hizo y el integrante de la cooperativa visualizará esta información en el momento en que ingrese a la plataforma. (Listo)
 12. No se considera aún el proceso de venta directa al público desde la plataforma, sino que sólo la publicación de las obras para ser exhibidas on-line. (Listo)
 13. Es fundamental que la página sea responsiva y que se adapte tanto a pantallas grandes como a pantallas de dispositivos móviles. (Listo)
 --> 
@@ -79,22 +79,22 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="registroModalLabel">Registro</h5>
+        <h5 class="modal-title" id="registroModalLabel" style="color:black">Registro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <!-- Formulario de registro -->
       <div class="modal-body">
         <form>
           <div class="mb-3">
-            <label for="emailRegistro" class="form-label">Email</label>
+            <label for="emailRegistro" class="form-label" style="color:black">Email</label>
             <input type="email" class="form-control" id="txtEmail" required>
           </div>
           <div class="mb-3">
-            <label for="nombreRegistro" class="form-label">Usuario</label>
+            <label for="nombreRegistro" class="form-label" style="color:black">Usuario</label>
             <input type="text" class="form-control" id="txtUsuario" required>
           </div>
           <div class="mb-3">
-            <label for="passwordRegistro" class="form-label">Contraseña</label>
+            <label for="passwordRegistro" class="form-label" style="color:black">Contraseña</label>
             <input type="password" class="form-control" id="txtPassword" required>
           </div>
           <button type="submit" class="btn btn-dark">Registrarse</button>
@@ -107,22 +107,22 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+        <h5 class="modal-title" id="loginModalLabel" style="color: black;">Iniciar sesión</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <!-- Formulario de inicio de sesión -->
       <div class="modal-body">
-        <form>
+        <form action="loginIndex.html">
           <div class="mb-3">
-            <label for="emailLogin" class="form-label">Email</label>
+            <label for="emailLogin" class="form-label" style="color: black;">Email</label>
             <input type="email" class="form-control" id="txtEmail" required>
           </div>
           <div class="mb-3">
-            <label for="passwordLogin" class="form-label">Contraseña</label>
+            <label for="passwordLogin" class="form-label" style="color: black;">Contraseña</label>
             <input type="password" class="form-control" id="txtPassword" required>
           </div>
           <!-- href a indexlogin.html -->
-          <a button type="submit" class="btn btn-dark" href="loginIndex.html">Iniciar sesión</button></a>
+          <button type="submit" class="btn btn-dark" style="color: white;">Iniciar sesión</button>
         </form>
       </div>
     </div>
@@ -151,7 +151,6 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Siguiente</span>
   </button>
-</div>
 </div>
 <!-- Fin carrusel -->
 
@@ -250,25 +249,25 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Contáctanos</h5>
+        <h5 class="modal-title" id="exampleModalLabel" style="color:black">Contáctanos</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
           <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre *</label>
+            <label for="nombre" class="form-label" style="color:black">Nombre *</label>
             <input type="text" class="form-control" id="txtNombre" required>
           </div>
           <div class="mb-3">
-            <label for="apellido" class="form-label">Apellido</label>
+            <label for="apellido" class="form-label" style="color:black">Apellido</label>
             <input type="text" class="form-control" id="txtApellido">
           </div>
           <div class="mb-3">
-            <label for="email" class="form-label">Email *</label>
+            <label for="email" class="form-label" style="color:black">Email *</label>
             <input type="email" class="form-control" id="txtEmail" required>
           </div>
           <div class="mb-3">
-            <label for="mensaje" class="form-label">Escribe el mensaje *</label>
+            <label for="mensaje" class="form-label" style="color:black">Escribe el mensaje *</label>
             <textarea class="form-control" id="txtMensaje" rows="3" required></textarea>
           </div>
           <div class="modal-footer">
@@ -282,7 +281,9 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
 </div>
 <!-- Fin modal de contacto -->
 
-<!-- Inicio card para contador de productos -->
+<!-- Inicio cards para lanzamientos -->
+<div class="container">
+  <!-- Inicio card para contador de productos -->
 <div class="row mt-4 justify-content-center">
   <div class="col-md-5">
     <div class="card text-center border-0">
@@ -295,139 +296,140 @@ si es que tiene. Los artículos el menos poseen una foto. (Listo)
 </div>
 <!-- Fin card para contador de productos -->
 
-<!-- Inicio cards para lanzamientos -->
-<section class="mb-5" id="lanzamientos">
-  <div class="row justify-content-center">
-    <h2 class="text-center my-4" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><strong>LANZAMIENTOS</strong></h2>
-    <div class=" text-center pt-0 pb-5">
-      <button class="btn btn-dark" type="button"">Ver todo</button>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/longhena.jpg" alt="Longhena" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Gridlink - Longhena</h4>
-          <p>Género: Grindcore/Mathgrind</p>
+  <section class="mb-5" id="lanzamientos">
+    <div class="row justify-content-center">
+      <h2 class="text-center my-4" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><strong>LANZAMIENTOS</strong></h2>
+      <div class=" text-center pt-0 pb-5">
+        <a href="lanzamientos.html"><button class="btn btn-dark" type="button">Ver todo</button></a>
+        
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/longhena.jpg" alt="Longhena" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>Gridlink - Longhena</h4>
+            <p>Género: Grindcore/Mathgrind</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/d-clone.jpg" alt="D-Clone" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>D-Clone - Creation and Destroy</h4>
+            <p>Género: Japanese Hardcore/D-Beat</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/tranquilizer.jpg" alt="Tranquilizer" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>Tranquilizer - Tranquilizer</h4>
+            <p>Género: Japanese Hardcore/Noisecore</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/d-clone.jpg" alt="D-Clone" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>D-Clone - Creation and Destroy</h4>
-          <p>Género: Japanese Hardcore/D-Beat</p>
+  </section>
+  <!-- Segunda sección de lanzamientos -->
+  <section class="mb-5" id="lanzamientos2">
+    <div class="row justify-content-center">
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/dropdead.jpg" alt="Dropdead" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>Dropdead - 落とす死</h4>
+            <p>Género: Thrashcore/Powerviolence</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/siege.jpg" alt="Siege" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>Siege - Drop Dead</h4>
+            <p>Género: Thrashcore/Powerviolence</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/disclose.jpg" alt="Disclose" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>Disclose - Yesterday's Fairytale, Tomorrow's Nightmare</h4>
+            <p>Género: D-Beat/Japanese Hardcore</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/tranquilizer.jpg" alt="Tranquilizer" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Tranquilizer - Tranquilizer</h4>
-          <p>Género: Japanese Hardcore/Noisecore</p>
+  </section>
+  <!-- Fin cards para productos -->
+  
+  <!-- Inicio cards para artistas -->
+  <section class="mb-5" id="artistas">
+    <div class="row justify-content-center">
+      <h2 class="text-center my-4" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><strong>ARTISTAS</strong></h2>
+      <div class=" text-center pt-0 pb-5">
+        <a href="artistas.html"><button class="btn btn-dark" type="button"">Ver todo</button></a>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/gridlink-band.jpg" alt="Gridlink-band" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>Gridlink</h4>
+          </div> 
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/discordance-band.jpg" alt="Discordance-band" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>Discordance Axis</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/wormrot-band.jpg" alt="Wormrot-band" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>Wormrot</h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- Segunda sección de lanzamientos -->
-<section class="mb-5" id="lanzamientos2">
-  <div class="row justify-content-center">
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/dropdead.jpg" alt="Dropdead" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Dropdead - 落とす死</h4>
-          <p>Género: Thrashcore/Powerviolence</p>
+  </section>
+  <!-- Segunda sección de artistas -->
+  <section class="mb-5" id="artistas2">
+    <div class="row justify-content-center">
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/d-clone-band.jpg" alt="D-Clone-Band" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>D-Clone</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/tranquilizer-band.jpg" alt="Tranquilizer-band" style="max-width: 192px; max-height: 192px;">
+          <div class="card-body text-center">
+            <h4>Tranquilizer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <div class="card h-100 border-0 mx-auto align-items-center mb-5">
+          <img class="card-img-top" src="img/dropdead-band.jpg" alt="Dropdead-band" style="max-width: 230px; max-height: 230px;">
+          <div class="card-body text-center">
+            <h4>Dropdead</h4>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/siege.jpg" alt="Siege" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Siege - Drop Dead</h4>
-          <p>Género: Thrashcore/Powerviolence</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/disclose.jpg" alt="Disclose" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Disclose - Yesterday's Fairytale, Tomorrow's Nightmare</h4>
-          <p>Género: D-Beat/Japanese Hardcore</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Fin cards para productos -->
-
-<!-- Inicio cards para artistas -->
-<section class="mb-5" id="artistas">
-  <div class="row justify-content-center">
-    <h2 class="text-center my-4" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><strong>ARTISTAS</strong></h2>
-    <div class=" text-center pt-0 pb-5">
-      <button class="btn btn-dark" type="button"">Ver todo</button>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/gridlink-band.jpg" alt="Gridlink-band" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Gridlink</h4>
-        </div> 
-      </div>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/discordance-band.jpg" alt="Discordance-band" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Discordance Axis</h4>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/wormrot-band.jpg" alt="Wormrot-band" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Wormrot</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Segunda sección de artistas -->
-<section class="mb-5" id="artistas2">
-  <div class="row justify-content-center">
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/d-clone-band.jpg" alt="D-Clone-Band" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>D-Clone</h4>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/tranquilizer-band.jpg" alt="Tranquilizer-band" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Tranquilizer</h4>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <div class="card h-100 border-0 mx-auto align-items-center mb-5">
-        <img class="card-img-top" src="img/dropdead-band.jpg" alt="Dropdead-band" style="max-width: 230px; max-height: 230px;">
-        <div class="card-body text-center">
-          <h4>Dropdead</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Fin cards para artistas -->
+  </section>
+  <!-- Fin cards para artistas -->
+</div>
 
 <!-- Footer -->
 <footer class="footer">

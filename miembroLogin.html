@@ -22,22 +22,30 @@
 <!-- Fin menú con logo-->
 
 <!-- Inicio login de miembro -->
-<div class="container d-flex justify-content-center align-items-center" style="height: 100vh">
+<div class="container d-flex justify-content-center align-items-center" style="height: 90vh">
     <div class="card p-4">
         <div class="modal-body">
-            <form>
+            <form action="miembro.html">
                 <div class="mb-3">
                     <h3 class="text-center">Inicie sesión</h3>
                     <hr>
-                    <label for="miembroEmailLogin" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="txtEmail" required>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 text-center">
+                  <label for="miembroEmailLogin" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="txtEmail" required>
+                </div>
+                <div class="mb-3 text-center">
                     <label for="miembroPasswordLogin" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="txtPassword" required>
                 </div>
-                <!-- href a miembro.html -->
-                <a button type="submit" class="btn btn-dark" href="miembro.html">Iniciar sesión</button></a>
+                <div class="mb-3 text-center">
+                  <label for="miembroPasswordCLogin" class="form-label">Confirme contraseña</label>
+                  <input type="password" class="form-control" id="txtPassword" required>
+              </div>
+                <div class=" text-center">
+                  <!-- href a miembro.html -->
+                  <button type="submit" class="btn btn-dark justify-content-center">Iniciar sesión</button>
+                </div>
             </form>
         </div>
     </div>
