@@ -1,5 +1,10 @@
 # Proyecto de Programación Web - Grupo Cero
 
+![Last Commit](https://img.shields.io/github/last-commit/Hushripple/GC-D)
+
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+
 ## Descripción
 
   Este repositorio contiene el código fuente y los recursos para un proyecto de Programación Web títulado "Grupo Cero". Este proyecto consiste en la creación de una plataforma en línea para una cooperativa de artistas plásticos. La plataforma permitirá a los artistas exhibir y vender sus obras de arte a través de una galería virtual. El enfoque principal es el de álbumes y artistas musicales, similar a una página de una discográfica enfocada en publicar distintos lanzamientos en formato físico.
@@ -20,8 +25,9 @@
 
 ## Tecnologías Utilizadas
 
-- HTML5
-- CSS3 (Bootstrap 5)
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ## Progreso
 
